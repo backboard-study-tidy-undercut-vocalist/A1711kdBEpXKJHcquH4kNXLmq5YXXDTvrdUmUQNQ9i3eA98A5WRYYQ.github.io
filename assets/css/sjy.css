@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;600;700&display=swap');
-		
-		      
 		      /* NO SELECT + HIGHLIGHT COLOR */
       * {
         user-select: none;
@@ -50,43 +47,3 @@
 
 
 
-button {
-font-family: 'Acme', sans-serif;
-background-color: #ffe8f5;
-border: solid 1px #000026;
-font-size: 0.9em;
-margin: 0 0.25em;
-padding: 0.25em 0.65em;
-cursor: pointer;
-}
-button:hover {
-background-color: #b8ffba;
-color :green;
-}
-#overlay {
-  position: fixed;
-  display: none;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.6);
-  /* background-color: rgba(0,0,0,0.5); */
-  z-index: 2;
-  cursor: pointer;
-}
-
-#text{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 1.3em;
-  color: #08efff;
-  transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
- /*  font-family: "Courier New", monospace; */
-  font-family: 'Signika Negative', sans-serif;
-  font-weight: 700;
-}

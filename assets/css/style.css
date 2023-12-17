@@ -1,7 +1,6 @@
 @charset "UTF-8";
 @import url(font-awesome.min.css);
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@800&family=Roboto:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
 /* Reset */
@@ -73,13 +72,9 @@
 
 	body {
 		background-color: #e8e2e2;
-		/* background-color: #04047d;
-		background-image: url("https://i.postimg.cc/N04rYP7Q/henry-be-Iicyia-PYGGI-unsplash.jpg"); */
-		/* background-image: url("https://res.cloudinary.com/sujoy/image/upload/v1663427253/little-flower.jpg"); */
 		background-image: linear-gradient(90deg ,#090979 0%, #00d4ff 100%);
 		background-size: cover;
 		background-position: top center;
-		
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 	}
@@ -99,7 +94,6 @@
 
 	body, input, select, textarea {
 		color: #000026;
-		/* font-family: "Crimson Text" ; */
 		font-family: 'Acme', sans-serif;
 		font-size: 13pt;
 		font-weight: 400;
@@ -164,18 +158,10 @@
 		}
 
 	h1 {
-		font-size: 1.75em;
+		font-size: 1.5em;
 	}
 
 		@media screen and (max-width: 980px) {
-
-			h1 {
-				font-size: 1.5em;
-			}
-
-		}
-
-		@media screen and (max-width: 736px) {
 
 			h1 {
 				font-size: 1.25em;
@@ -183,8 +169,16 @@
 
 		}
 
+		@media screen and (max-width: 736px) {
+
+			h1 {
+				font-size: 1em;
+			}
+
+		}
+
 	h2 {
-		font-size: 1.35em;
+		font-size: 1.25em;
 	}
 
 		@media screen and (max-width: 736px) {
@@ -242,7 +236,7 @@
 		/* margin: 0 0.25em; */ /* 07.11.2022 */
 		padding: 0.25em 0.2em;
 		
-		background-color: #05014a; /* pore add kora */
+		background-color: #fff; /* pore add kora */
 	}
 
 	pre {
@@ -821,9 +815,8 @@
   filter: drop-shadow(1.2px 1.2px #000);
 		}
 		#header h2 {
-			color : #00bf8f;
+			color : #03058a;
 			font-weight: 600;
-		
 		}
 
 		#header .avatar {
