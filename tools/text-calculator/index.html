@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Text-based Calculator with History</title>
+  <link rel="stylesheet" href="assets/css/bulma-0.9.4.min.css">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body > footer {
+      position: sticky;
+      top: 100vh;
+    }
+
+    @media screen and (min-width: 1068px) {
+      .container {
+        max-width: 600px;
+        width: 600px;
+      }
+    }
+
+    .box {
+      box-shadow: none;
+      border: solid 1px #ccc;
+    }
+
+    #historyLog {
+      max-height: 60vh;
+      overflow-y: auto;
+    }
+
+    #historyLog > div:not(:first-child) {
+      margin-top: 15px;
+    }
+
+    .footer {
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <script defer src="assets/js/vue-3.3.2.global.prod.js"></script>
+  <script defer src="assets/js/math-11.8.0.min.js"></script>
+  <script defer src="app.js?v=1.7"></script>
+
+  <section id="app" class="section" v-cloak>
+
+    <div class="container is-clearfix">
+
+      <h1 class="title">Text Calculator</h1>
+
+      <div class="box is-size-4" id="historyLog" v-show="resultHistory.length > 0">
+        <div v-for="item in resultHistory">
+          <div>{{ item.expression }}</div>
+          <div>
+            <span class="has-text-dark mr-2">=</span>
+            <span class="has-text-link">{{ item.answer }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-vcentered">
+        <div class="control column is-6">
+          <input class="input is-large" id="expression" type="text" autofocus placeholder="e.g. 2 + 2" v-model="expression"
+            v-on:keyup.enter="addToHistory"
+            v-on:keyup.up="showPreviousExpression"
+            v-on:keyup.down="showNextExpression"
+            v-on:keyup.esc="clearExpression"
+          >
+        </div>
+
+        <div class="control column is-6">
+          <div class="is-size-4">
+            <strong>=</strong>
+            {{ resultWithCommas }}
+          </div>
+        </div>
+      </div>
+
+      <button class="button is-pulled-right" v-on:click="clearAll">Clear</button>
+
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          <a href="../../">hompage</a> | <a href="../blog">blog</a> | <a href="../tools">tools</a> | <a href="../contact">contact</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
