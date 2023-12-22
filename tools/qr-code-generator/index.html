@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">  
+    <meta charset="utf-8">
+	<meta name="robots" content="noindex">
     <title>QR Code Generator - সুজয় - SUJOY</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
@@ -11,19 +12,21 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Ubuntu', sans-serif;
+  text-align: center !important;
 }
 body{
   display: flex;
   padding: 0 10px;
   min-height: 100vh;
   align-items: center;
-  background: #3498DB;
+  background: #bbfcf8;
   justify-content: center;
 }
 ::selection{
   color: #fff;
-  background: #3498DB;
+  background: #bbfcf8;
 }
+ 
 .wrapper{
   height: 265px;
   max-width: 410px;
@@ -39,6 +42,7 @@ body{
 header h1{
   font-size: 21px;
   font-weight: 500;
+  color: #0202ab;
 }
 header p{
   margin-top: 5px;
@@ -72,7 +76,7 @@ header p{
   cursor: pointer;
   margin-top: 20px;
   font-size: 17px;
-  background: #3498DB;
+  background: #019188;
 }
 .qr-code{
   opacity: 0;
@@ -111,10 +115,13 @@ header p{
     width: 160px;
   }  
 }
+.footer {
+bottom: 10px;
+ }
 </style>
   </head>
   
-  <body>
+  <body>  
     <div class="wrapper">
       <header>
         <h1>QR Code Generator</h1>
@@ -127,6 +134,15 @@ header p{
       <div class="qr-code">
         <img src="" alt="qr-code">
       </div>
+	  <div class="footer">
+	  <br><br>
+	  <br><br>
+	  <br><br>
+	  <br><br>
+	  <a href="../../">hompage</a> &nbsp; | &nbsp; <a href="../../blog">blog</a> &nbsp; | &nbsp; <a href="../../tools">tools</a> &nbsp; | &nbsp; <a href="../../contact">contact</a>
+	  <br><br>
+	  </div>
+	  
     </div>
 
     <script>
