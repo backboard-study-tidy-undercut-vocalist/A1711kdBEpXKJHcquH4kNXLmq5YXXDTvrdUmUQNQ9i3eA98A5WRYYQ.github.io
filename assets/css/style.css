@@ -848,7 +848,7 @@
 	#footer {
 		text-align: center;
 		font-size: 10px;
-		font-family: 'Acme', sans-serif;
+		font-family: "Courier New", monospace;
 		padding: 4em 0 4em 0;
 		/* color : #00ff08; */
 		color: #52fac2;
