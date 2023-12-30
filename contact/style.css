@@ -17,12 +17,16 @@
 	display: block;
 }
 
-/* make links in main content green */
+/* make links in main content blue */
 main a {
-	color: #28a745 !important;
+	color: #075bf7 !important;
+	border-bottom: 1.75px dotted #075bf7;
+    text-decoration: none;
 }
 main a:focus, main a:hover {
-	color: #19692c !important;
+	color: #023ba6 !important;
+	border-bottom: 2px dotted #023ba6;
+    text-decoration: none;
 }
 
 /* footer spacing */
